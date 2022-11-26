@@ -5,7 +5,7 @@ const initialState = {
   player1Squares: [] as number[],
   player2Squares: [] as number[],
   gameOn: true,
-  winner: "",
+  result: "",
 };
 
 export const gameSlice = createSlice({
@@ -21,14 +21,14 @@ export const gameSlice = createSlice({
         state.player1Turn = true;
       }
     },
-    setWinner: (state, action) => {
+    setResult: (state, action) => {
       state.gameOn = false;
-      state.winner = action.payload;
+      state.result = action.payload;
     },
     restartGame: () => initialState,
   },
 });
 
-export const { chooseSquare, setWinner, restartGame } = gameSlice.actions;
+export const { chooseSquare, setResult, restartGame } = gameSlice.actions;
 
 export default gameSlice.reducer;

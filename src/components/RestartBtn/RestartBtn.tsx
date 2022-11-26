@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { restartGame } from "../../redux/gameSlice/gameSlice";
-import { Wrapper } from "./RestartBtn.styles";
+import { StyledBtn } from "./RestartBtn.styles";
 
 export default function RestartBtn() {
   const dispatch = useDispatch();
@@ -9,5 +9,5 @@ export default function RestartBtn() {
     dispatch(restartGame());
   };
 
-  return <Wrapper onClick={handleClick}>Restart</Wrapper>;
+  return <StyledBtn onClick={handleClick}>Restart</StyledBtn>;
 }

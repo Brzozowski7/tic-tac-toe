@@ -3,12 +3,11 @@ import Board from "../components/Board";
 import RestartBtn from "../components/RestartBtn";
 import TurnIndicator from "../components/TurnIndicator";
 import { GlobalStyle, Heading, Wrapper } from "./App.styles";
-import useCheckResult from "./useCheckWinner";
+import useCheckResult from "./useCheckResult";
 
 function App() {
-  
   useCheckResult();
-  const { winner } = useSelector(({ game }: IStore) => game);
+  const { result } = useSelector(({ game }: IStore) => game);
 
   return (
     <Wrapper>
@@ -16,7 +15,7 @@ function App() {
       <Heading>Tic tac toe</Heading>
       <TurnIndicator />
       <Board />
-      {winner && <RestartBtn />}
+      {result && <RestartBtn />}
     </Wrapper>
   );
 }

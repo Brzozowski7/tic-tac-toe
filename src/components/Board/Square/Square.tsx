@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import { chooseSquare } from "../../../redux/gameSlice/gameSlice";
 import { Wrapper, PlayerMark } from "./Square.styles";
-import CircleSvg from "../../../images/circle.svg";
-import CrossSvg from "../../../images/cross.svg";
+import circleSvg from "../../../images/circle.svg";
+import crossSvg from "../../../images/cross.svg";
 
 interface SquareProps {
   index: number;
@@ -27,10 +27,10 @@ export default function Square({ index }: SquareProps) {
   return (
     <Wrapper onClick={handleClick}>
       {player1Squares.includes(index) && (
-        <PlayerMark src={CircleSvg} alt="circle" />
+        <PlayerMark src={circleSvg} alt="circle" />
       )}
       {player2Squares.includes(index) && (
-        <PlayerMark src={CrossSvg} alt="cross" />
+        <PlayerMark src={crossSvg} alt="cross" />
       )}
     </Wrapper>
   );

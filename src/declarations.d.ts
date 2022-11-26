@@ -4,6 +4,6 @@ interface IStore {
     player1Squares: number[];
     player2Squares: number[];
     gameOn: boolean;
-    winner: "Player 1 won" | "Player 2 won" | "Draw" | "";
+    result: "Player 1 won" | "Player 2 won" | "Draw" | "";
   };
 }

@@ -1,6 +1,9 @@
-export const displayGameInformation = (player1Turn: boolean, winner: string) => {
-  if (winner) {
-    return winner;
+export const displayGameInformation = (
+  player1Turn: boolean,
+  result: string
+) => {
+  if (result) {
+    return result;
   } else {
     if (player1Turn) {
       return "Player 1's turn";
